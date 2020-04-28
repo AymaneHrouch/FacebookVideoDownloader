@@ -1,0 +1,43 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	padding-top: 15px;
+}
+
+.download-btn {
+	background-color: #4BB543;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 5px 15px;
+	cursor: pointer;
+	margin-left: 10px;
+	display: hidden;
+}
+
+#btn {
+	font-size: 15px;
+	background-color: blue;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px 15px;
+	height: 25px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+#input {
+	height: 25px;
+}
+
+
+body {
+	width: 350px;
+	height: 90px;
+	text-align: center;
+}

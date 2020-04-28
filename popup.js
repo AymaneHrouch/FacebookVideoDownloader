@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 	let btn = document.getElementById('btn');
+	let sdBtn = document.getElementById('sd');
+	let hdBtn = document.getElementById('hd');
 	btn.addEventListener('click', () => {
+		hdBtn.hidden = false;
 		let xhr = new XMLHttpRequest();
 		xhr.open("GET", document.getElementById('input').value, true);
 		xhr.onload = () => {
