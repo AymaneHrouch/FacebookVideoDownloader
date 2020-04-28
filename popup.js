@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let wait = document.getElementById('wait');
 	btn.addEventListener('click', () => {
 		let input = document.getElementById('input').value
-		let regex = new RegExp('.*//.*\.facebook.com/.*');
+		let regex = new RegExp('.*//.*\.facebook.com/.+');
 		if(!regex.test(input)) {
 			alert("Please enter a valid link");
 			return;
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			let linkHeadHd = str.search("\"playable_url_quality_hd\":\"");
 			let hdBool = !(linkHeadHd == -1);
 
-			str = str.split('');
+			str = str.split(''); // spliting string to manipulate the array
 
 			if(hdBool) {
 				linkHeadHd += 27;
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					linkHd.splice(m, 1);
 					m = linkHd.indexOf('\\');
 				}
+
 				linkHd = linkHd.join('');
 				hdBtn.href = linkHd;
 				hdBtn.hidden = false;
@@ -61,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				linkSd.splice(n, 1);
 				n = linkSd.indexOf('\\');
 			}
+
 			linkSd = linkSd.join('');
 			sdBtn.href = linkSd;
 			wait.hidden = true;
 			sdBtn.hidden = false;
-
 		}
 		xhr.send();
 	})

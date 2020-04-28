@@ -21,13 +21,12 @@
 }
 
 #btn {
-	font-size: 15px;
+	font-size: .9rem;
 	background-color: blue;
 	color: #fff;
 	font-weight: bold;
 	padding: 5px 15px;
 	height: 25px;
-	margin-left: 15px;
 	cursor: pointer;
 }
 
