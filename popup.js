@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			let str = xhr.responseText;
 			// let n, i, x, linkHeadSd, linkHeadHd, linkTailSd, linkSd, linkHd;
 			let linkHeadSd = str.search("\"playable_url\":\"");
-			if(linkHeadSd == -1) { // if the Sd version doesn't exist then the video doesn't exist
+			if(linkHeadSd == -1) { // if the SD version doesn't exist then the video doesn't exist
 				alert("Video not found!");
 				return;
 			}
@@ -68,10 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		}
 		xhr.send();
-	})    
-
-
-
-
-
+	})
 })
