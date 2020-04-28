@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			let n, i, x, linkHead, linkTail, link;
 
 			linkHead = str.search("\"playable_url\"");
-			alert(linkHead)
+			if(linkHead == -1) {
+				alert("Video not found!");
+				return;
+			}
 			linkHead += 16;
 			str = str.split('');
 
@@ -23,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			    link.push(str[i]);
 			  }
 
-			 n = str.indexOf('\\');
 			// Unescaping the string 
+			 n = str.indexOf('\\');
 			while(n!==-1) {
 				link.splice(n, 1);
 				n = link.indexOf('\\');
