@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			let linkHeadHd = str.search("\"playable_url_quality_hd\":\"");
 			let hdBool = !(linkHeadHd == -1);
 
-			str = str.split(''); // spliting string to manipulate the array
-
 			if(hdBool) {
 				linkHeadHd += 27;
 				let linkTailHd = str.indexOf("\"", linkHeadHd);

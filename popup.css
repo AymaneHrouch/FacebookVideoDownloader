@@ -5,6 +5,12 @@
 	font-family: sans-serif;
 }
 
+body {
+	width: 350px;
+	height: 90px;
+	text-align: center;
+}
+
 .container {
 	padding-top: 15px;
 }
@@ -32,11 +38,4 @@
 
 #input {
 	height: 25px;
-}
-
-
-body {
-	width: 350px;
-	height: 90px;
-	text-align: center;
 }
