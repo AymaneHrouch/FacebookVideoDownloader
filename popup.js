@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let wait = document.getElementById('wait');
 	btn.addEventListener('click', () => {
 		let input = document.getElementById('input').value
+		// Checking if the facebook.com is the hostname
 		let regex = new RegExp('.*//.*\.facebook.com/.+');
 		if(!regex.test(input)) {
 			alert("Please enter a valid link");
@@ -16,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		wait.hidden = false;
 		xhr.onload = () => {
 			let str = xhr.responseText;
-			// let n, i, x, linkHeadSd, linkHeadHd, linkTailSd, linkSd, linkHd;
 			let linkHeadSd = str.search("\"playable_url\":\"");
 			if(linkHeadSd == -1) { // if the SD version doesn't exist then the video doesn't exist
-				alert("Video not found!");
+				wait.hidden = true;
+				alert("Video not found! Review your link and try again.");
 				return;
 			}
 
