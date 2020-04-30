@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	btn.addEventListener('click', () => {
 		let input = document.getElementById('input').value
 		// Checking if the facebook.com is the hostname
-		let regex = new RegExp('.*//.*\.facebook.com/.+');
+		let regex = new RegExp('.*//www\.facebook\..+');
 		if(!regex.test(input)) {
 			alert("Please enter a valid link");
 			return;
