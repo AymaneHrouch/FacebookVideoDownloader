@@ -28,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let linkHeadHd = str.search("\"playable_url_quality_hd\":");
 			linkHeadHd += 27;
-
 			// "playable_url_quality_hd":null when HD isn't available
 			let hdBool = !(str[linkHeadHd - 1] === 'n');
 
 			if(hdBool) {
-				alert(`link is: ${str[linkHeadHd - 1]}`)
 				let linkTailHd = str.indexOf("\"", linkHeadHd);
 				let linkHd = [];
 				for(let i=linkHeadHd;i<linkTailHd;i++) {
